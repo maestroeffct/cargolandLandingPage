@@ -1,8 +1,9 @@
 "use client";
 
 import { satoshi } from "@/app/fonts";
-import { ArrowRight, ArrowUpRight, ChevronDown, Flag } from "lucide-react";
+import { ArrowRight, ArrowUpRight, ChevronDown } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import CountrySelector from "./CountrySelector";
 
 export default function Navbar() {
@@ -12,7 +13,7 @@ export default function Navbar() {
         className={`mx-auto flex max-w-7xl ${satoshi.className} items-center justify-between px-6`}
       >
         {/* LOGO — single image unit */}
-        <div className="rounded-xl px-4 py-3">
+        <Link href="/" className="rounded-xl px-4 py-3">
           <Image
             src="/images/logo2.png"
             alt="CargolandFood"
@@ -21,23 +22,26 @@ export default function Navbar() {
             priority
             unoptimized
           />
-        </div>
+        </Link>
 
         {/* CENTER NAV PILL */}
-        <div className="hidden md:flex items-center gap-10 rounded-full bg-[#2D2020] px-10 py-4 text-sm text-[#F4F1EE]">
-          <div className="flex items-center gap-2 font-medium cursor-pointer">
+        <div className="hidden md:flex items-center gap-4 rounded-full bg-[#2D2020] px-6 py-3 text-sm text-[#F4F1EE]">
+          <div className="group flex items-center gap-2 font-medium cursor-pointer rounded-full px-3 py-2 transition hover:bg-white/10 hover:text-[#F25C05]">
             <span>🏪</span>
             <span>Vendor/Restaurant</span>
           </div>
 
-          <div className="flex items-center gap-2 font-medium cursor-pointer">
+          <div className="group flex items-center gap-2 font-medium cursor-pointer rounded-full px-3 py-2 transition hover:bg-white/10 hover:text-[#F25C05]">
             <span>🛵</span>
             <span>Delivery man</span>
           </div>
 
-          <div className="flex items-center gap-2  font-medium cursor-pointer">
+          <div className="group flex items-center gap-2 font-medium cursor-pointer rounded-full px-3 py-2 transition hover:bg-white/10 hover:text-[#F25C05]">
             <span>More</span>
-            <ChevronDown size={16} />
+            <ChevronDown
+              size={16}
+              className="transition-transform duration-200 group-hover:rotate-180"
+            />
           </div>
         </div>
 

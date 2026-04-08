@@ -14,7 +14,7 @@ export default function HeroActions() {
       <motion.button
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 0.97 }}
-        className="rounded-full bg-[#1F1F1F] px-8 py-4 text-white font-semibold shadow-lg transition"
+        className="cursor-pointer rounded-full bg-[#1F1F1F] px-8 py-4 text-white font-semibold shadow-lg transition"
       >
         Order Now
         <span>
@@ -27,7 +27,7 @@ export default function HeroActions() {
       <motion.button
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 0.97 }}
-        className="flex items-center gap-4 rounded-full bg-[#F8E9C9] px-8 py-4 font-semibold text-[#1F1F1F] shadow-lg transition"
+        className="flex cursor-pointer items-center gap-4 rounded-full bg-[#F8E9C9] px-8 py-4 font-semibold text-[#1F1F1F] shadow-lg transition"
       >
         <span>Download App</span>
 

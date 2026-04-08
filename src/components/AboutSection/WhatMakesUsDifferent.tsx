@@ -261,29 +261,29 @@ export default function WhatMakesUsDifferent() {
   }
 
   return (
-    <section className={`relative bg-white py-16 ${satoshi.className}`}>
+    <section className={`relative bg-white py-12 md:py-16 ${satoshi.className}`}>
       {/* Header */}
       <div className="mx-auto max-w-2xl text-center px-6">
-        <h2 className="text-4xl font-extrabold text-[#F25C05]">
+        <h2 className="text-3xl md:text-4xl font-extrabold text-[#F25C05]">
           What Makes Us Different?
         </h2>
-        <h3 className="mt-2 text-3xl md:text-4xl font-bold text-[#1F1614]">
+        <h3 className="mt-2 text-2xl md:text-4xl font-bold text-[#1F1614]">
           Fresh Flavors, Every Time
         </h3>
-        <p className="mt-4 text-[#6B625E] text-xl pt-3">
+        <p className="mt-4 text-[#6B625E] text-base md:text-xl pt-2 md:pt-3">
           Enjoy a seamless experience for ordering food, receiving fast
           deliveries, and managing your meals effortlessly in one place.
         </p>
       </div>
 
       {/* Tabs */}
-      <div className="mt-10 flex justify-center">
-        <div className="flex rounded-full bg-[#FFF2E8] p-1">
+      <div className="mt-8 md:mt-10 flex justify-center">
+        <div className="flex flex-wrap justify-center gap-2 rounded-full bg-[#FFF2E8] p-1">
           {tabs.map((tab) => (
             <button
               key={tab}
               onClick={() => handleTabChange(tab)}
-              className={`px-6 py-2 text-sm font-medium rounded-full transition
+              className={`cursor-pointer px-4 md:px-6 py-2 text-xs md:text-sm font-medium rounded-full transition
                 ${
                   activeTab === tab
                     ? "bg-[#F25C05] text-white"
@@ -347,7 +347,7 @@ export default function WhatMakesUsDifferent() {
       </div>
 
       {/* MOBILE */}
-      <div className="md:hidden mt-12 px-6 flex flex-col items-center gap-6">
+      <div className="md:hidden mt-10 px-6 flex flex-col items-center gap-6">
         <AnimatePresence mode="wait">
           <motion.div
             key={content[activeTab].image}
@@ -359,8 +359,9 @@ export default function WhatMakesUsDifferent() {
             <Image
               src={content[activeTab].image}
               alt={`${activeTab} app view`}
-              width={260}
-              height={500}
+              width={240}
+              height={480}
+              className="w-[220px]"
               priority
             />
           </motion.div>
@@ -401,11 +402,11 @@ function FeatureCard({
     <div
       className={`${
         mobile
-          ? "w-full"
+          ? "w-full max-w-none"
           : position === "left"
           ? "absolute left-23 -translate-x-12 "
           : "absolute right-23 translate-x-12 top-20"
-      } max-w-xs  border-3 border-[#FFE5D7] rounded-2xl bg-[#FFF5EE] p-3 shadow-sm`}
+      } max-w-xs border-3 border-[#FFE5D7] rounded-2xl bg-[#FFF5EE] p-4 shadow-sm`}
     >
       <h4 className="flex items-center gap-2 font-semibold italic text-[#B64504]">
         <img

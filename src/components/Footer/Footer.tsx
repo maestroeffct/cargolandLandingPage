@@ -34,7 +34,7 @@ const socialLinks = [
   {
     label: "YouTube",
     href: "#",
-    icon: <Youtube className="h-6 w-6 fill-current" strokeWidth={2.2} />,
+    icon: <Youtube className="h-6 w-6 fill" strokeWidth={2.2} />,
   },
 ];
 
@@ -56,7 +56,7 @@ export default function Footer() {
           <div className="max-w-[440px]">
             <Link href="/" className="inline-block">
               <Image
-                src="/images/logo-white.png"
+                src="/images/logo.png"
                 alt="Cargoland Food"
                 width={194}
                 height={56}
@@ -76,7 +76,7 @@ export default function Footer() {
                   key={item.label}
                   href={item.href}
                   aria-label={item.label}
-                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition hover:border-white/35 md:h-[52px] md:w-[52px]"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-white/20 text-white transition hover:border-[#F76600] hover:text-[#F76600] md:h-[52px] md:w-[52px]"
                 >
                   {item.icon}
                 </a>
@@ -111,7 +111,7 @@ export default function Footer() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="text-[15px] leading-[1.65] text-[#F1E7E1] transition hover:text-white sm:text-[16px] md:text-[18px]"
+                className="text-[15px] leading-[1.65] text-[#F1E7E1] transition hover:text-[#F76600] sm:text-[16px] md:text-[18px]"
               >
                 {item.label}
               </Link>
@@ -123,7 +123,7 @@ export default function Footer() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="text-[15px] leading-[1.65] text-[#F1E7E1] transition hover:text-white sm:text-[16px] md:text-[18px]"
+                className="text-[15px] leading-[1.65] text-[#F1E7E1] transition hover:text-[#F76600] sm:text-[16px] md:text-[18px]"
               >
                 {item.label}
               </Link>
@@ -135,7 +135,7 @@ export default function Footer() {
               href="https://maps.google.com/?q=1+Awori+St,+Papa+Ashafa,+Lagos+102212,+Lagos+Nigeria"
               target="_blank"
               rel="noreferrer"
-              className="text-[15px] leading-[1.6] text-[#F1E7E1] underline underline-offset-4 decoration-1 sm:text-[16px] md:text-[18px]"
+              className="text-[15px] leading-[1.6] text-[#F1E7E1] underline underline-offset-4 decoration-1 transition hover:text-[#F76600] sm:text-[16px] md:text-[18px]"
             >
               1 Awori St, Papa Ashafa,
               <br />
@@ -144,14 +144,14 @@ export default function Footer() {
 
             <a
               href="mailto:info@cargolandfood.com"
-              className="text-[15px] leading-[1.6] text-[#F1E7E1] transition hover:text-white sm:text-[16px] md:text-[18px]"
+              className="text-[15px] leading-[1.6] text-[#F1E7E1] transition hover:text-[#F76600] sm:text-[16px] md:text-[18px]"
             >
               info@cargolandfood.com
             </a>
 
             <a
               href="tel:+2347046787905"
-              className="text-[15px] leading-[1.6] text-[#F1E7E1] transition hover:text-white sm:text-[16px] md:text-[18px]"
+              className="text-[15px] leading-[1.6] text-[#F1E7E1] transition hover:text-[#F76600] sm:text-[16px] md:text-[18px]"
             >
               +2347046787905
             </a>
