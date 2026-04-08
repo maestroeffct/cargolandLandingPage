@@ -1,5 +1,6 @@
 import WhatMakesUsDifferent from "@/src/components/AboutSection/WhatMakesUsDifferent";
 import DownloadAppSection from "@/src/components/DownloadApp/DownloadAppSection";
+import Footer from "@/src/components/Footer/Footer";
 import FAQSection from "@/src/components/Faq/Faq";
 import FeaturePillsMarquee from "@/src/components/Features/FeaturePills";
 import Hero from "@/src/components/Hero/Hero";
@@ -16,6 +17,7 @@ export default function HomePage() {
       <TestimonialsSection />
       <FAQSection />
       <DownloadAppSection />
+      <Footer />
     </>
   );
 }
